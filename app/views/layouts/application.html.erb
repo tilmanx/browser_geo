@@ -13,10 +13,12 @@
 
   <div class="container">
     <div class="row">
-      <div class="span8"><%= yield %></div>
-      <div class="span4">
-        <%= content_for?(:sidebar) ? yield(:sidebar) : render("layouts/sidebar") %>
-      </div>
+      <div class="span<%= (request.path_info == '/') ? 12 : 8 %>"><%= yield %></div>
+      <% if request.path_info != '/' %>
+        <div class="span4">
+          <%= content_for?(:sidebar) ? yield(:sidebar) : render("layouts/sidebar") %>
+        </div> 
+      <% end %>
     </div>
   </div>
 
