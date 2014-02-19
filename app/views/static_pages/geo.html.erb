@@ -1,0 +1,22 @@
+
+
+<%# ip = "92.225.126.129" %>
+<% 10.times do |zahl| %>
+
+  <% ip = "#{zahl}2.225.126.129" %>
+
+  <% geocode = Geocoder.search(ip) %>
+  <% geocode.each do |geo| %>
+    <p>
+      <h2><%= ip %></h2>
+      <%= "#{geo.country_code} #{geo.country}" %><br>
+      <%= "#{geo.province_code} #{geo.province}" %><br>
+      <%= "#{geo.state_code} #{geo.state}" %><br>
+      <%= "Latitude:  #{geo.latitude}" %><br>
+      <%= "Longitude: #{geo.longitude}" %>
+    </p>
+  <% end %>
+  <p><%= geocode.inspect %></p>
+  <hr>
+<% end %>
+

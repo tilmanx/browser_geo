@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>UserAgent</title>
+  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= csrf_meta_tags %>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+  <%= render 'layouts/navigation' %>
+
+  <div class="container">
+    <div class="row">
+      <div class="span8"><%= yield %></div>
+      <div class="span4">
+        <%= content_for?(:sidebar) ? yield(:sidebar) : render("layouts/sidebar") %>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

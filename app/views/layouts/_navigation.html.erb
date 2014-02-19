@@ -1,0 +1,26 @@
+<div class="navbar navbar-fixed-top">
+  <div class="navbar-inner">
+    <div class="container">
+      <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </a>
+      <a class="brand" href="/">browser and devices</a>
+      <div class="nav-collapse">
+        <ul class="nav">
+          <li><%= link_to "os", '/os' %></li>
+          <li><%= link_to "browser", '/browser' %></li>
+          <li><%= link_to "devices", '/devices' %></li>
+          <li><%= link_to "geo", '/geo' %></li>
+
+          <% if false #user_signed_in? %>
+            <li><%= link_to "you" %></li>
+            <li><%= link_to "Prouse" %></li>
+            <li><%= link_to "logout" %></li>
+          <% end %>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>

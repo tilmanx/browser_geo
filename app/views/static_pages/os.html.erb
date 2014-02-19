@@ -1,0 +1,12 @@
+
+
+<% possibilities = ["chrome_os?", "mobile?", "platform", "mac?", "windows?", "windows_x64?", "windows8?", "windows_rt?", "user_agent"].sort %>
+
+<% possibilities.each do |technique| %>
+  <% if browser.send(technique) %>
+    <span class="technique"><%= "#{technique.gsub('?', "")}" %> <%= "#{browser.send(technique)}" %></span><br/>
+  <% else %>
+    <%= "#{technique} FALSE" %><br/>
+  <% end %>
+<% end %>
+

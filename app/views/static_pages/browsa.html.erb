@@ -1,0 +1,12 @@
+
+
+<% possibilities = ["safari?", "opera?", "chrome?", "chrome_os?", "mobile?", "firefox?", "ie?", "ie6?", "ie7?", "ie8?", "ie9?", "ie10?", "ie11?", "modern?", "bot?", "name", "meta", "user_agent", "version", "full_version", "accept_language"].sort %>
+
+<% possibilities.each do |technique| %>
+  <% if browser.send(technique) %>
+    <span class="technique"><%= "#{technique.gsub('?', "")}" %> <%= "#{browser.send(technique)}" %></span><br/>
+  <% else %>
+    <%= "#{technique} FALSE" %><br/>
+  <% end %>
+<% end %>
+
