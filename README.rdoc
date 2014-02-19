@@ -5,6 +5,9 @@ basic Rails4 app with twitter-bootstrap, browser and geocoder.
 
 * Ruby version 2.1.0
 
+
+not yet: 
+
 * System dependencies
 
 * Configuration
@@ -19,8 +22,3 @@ basic Rails4 app with twitter-bootstrap, browser and geocoder.
 
 * Deployment instructions
 
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
